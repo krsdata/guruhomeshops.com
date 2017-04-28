@@ -1,6 +1,5 @@
 <div class="col-md-9">
     <div class="detail-block">
-
         <div style="visibility: visible; animation-name: fadeInUp;" class="row  wow fadeInUp animated">
                 
             <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
@@ -24,94 +23,94 @@
 
                 </div><!-- /.single-product-gallery -->
             </div>
-<!-- /.gallery-holder -->        			
+		<!-- /.gallery-holder -->        			
 			<div class="col-sm-6 col-md-7 product-info-block">
-				<div class="product-info">
-					<h1 class="name">{{$product->product_title}}</h1>
-				 
+		<div class="product-info">
+			<h1 class="name">{{$product->product_title}}</h1>
+		 
 
-					<div class="stock-container info-container m-t-10">
-						<div class="row">
-							<div class="col-sm-2">
-								<div class="stock-box">
-									<span class="label">Availability :</span>
-								</div>	
-							</div>
-							<div class="col-sm-9">
-								<div class="stock-box">
-									<span class="value">In Stock</span>
-								</div>	
-							</div>
-						</div><!-- /.row -->	
-					</div><!-- /.stock-container -->
+			<div class="stock-container info-container m-t-10">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="stock-box">
+							<span class="label">Availability :</span>
+						</div>	
+					</div>
+					<div class="col-sm-9">
+						<div class="stock-box">
+							<span class="value">In Stock</span>
+						</div>	
+					</div>
+				</div><!-- /.row -->	
+			</div><!-- /.stock-container -->
 
-					<div class="description-container m-t-20">
-						 {!! str_limit($product->description,100) !!}
-					</div><!-- /.description-container -->
+			<div class="description-container m-t-20">
+				 {!! str_limit($product->description,100) !!}
+			</div><!-- /.description-container -->
 
-					<div class="price-container info-container m-t-20">
-						<div class="row">
-							
-
-							<div class="col-sm-6">
-								<div class="price-box">
-									<span class="price">RS{{$product->price-($product->price*$product->discount/100)}}</span>
-									<span class="price-strike">RS{{$product->price}}</span>
-								</div>
-							</div>
-
-							<div class="col-sm-6">
-								<div class="favorite-button m-t-10">
-									<a data-original-title="Wishlist" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="" href="index.htm#">
-									    <i class="fa fa-heart"></i>
-									</a>
-									 
-									<a data-original-title="E-mail" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="" href="index.htm#">
-									    <i class="fa fa-envelope"></i>
-									</a>
-								</div>
-							</div>
-
-						</div><!-- /.row -->
-					</div><!-- /.price-container -->
-
-					<div class="quantity-container info-container">
-						<div class="row">
-							
-							<div class="col-sm-2">
-								<span class="label">Qty :</span>
-							</div>
-							
-							<div class="col-sm-2">
-								<div class="cart-quantity">
-									<div class="quant-input">
-						                
-						                <input value="1" type="number" min="1" onchange="updateCart(this.value)">
-					              </div> 
-					            </div>
-							</div>
-
-							<div class="col-sm-2" style="margin-right: 70px;">
-								<a href="{{ url('addToCart/'.$product->id) }}" id="addToCart" class="btn btn-primary">
-                                <i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
-							</div>
-                            | 
-                            <div class="col-sm-2">
-                                <a href="{{ url('buyNow/'.$product->id) }}" class="btn btn-success">
-                                <i class="fa fa-shopping-cart inner-right-vs"></i> BUY </a>
-                            </div>
-
-
-							
-						</div><!-- /.row -->
-					</div><!-- /.quantity-container --> 
+			<div class="price-container info-container m-t-20">
+				<div class="row">
 					
-				</div><!-- /.product-info -->
-			</div><!-- /.col-sm-7 -->
-		</div><!-- /.row -->
-     </div>  
 
-       <div class="product-tabs inner-bottom-xs  wow fadeInUp">
+					<div class="col-sm-6">
+						<div class="price-box">
+							<span class="price">RS{{$product->price-($product->price*$product->discount/100)}}</span>
+							<span class="price-strike">RS{{$product->price}}</span>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="favorite-button m-t-10">
+							<a data-original-title="Wishlist" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="" href="index.htm#">
+							    <i class="fa fa-heart"></i>
+							</a>
+							 
+							<a data-original-title="E-mail" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="" href="index.htm#">
+							    <i class="fa fa-envelope"></i>
+							</a>
+						</div>
+					</div>
+
+				</div><!-- /.row -->
+			</div><!-- /.price-container -->
+
+			<div class="quantity-container info-container">
+				<div class="row">
+					
+					<div class="col-sm-2">
+						<span class="label">Qty :</span>
+					</div>
+					
+					<div class="col-sm-2">
+						<div class="cart-quantity">
+							<div class="quant-input">
+				                
+				                <input value="1" type="number" min="1" onchange="updateCart(this.value)">
+			              </div> 
+			            </div>
+					</div>
+
+					<div class="col-sm-2" style="margin-right: 70px;">
+						<a href="{{ url('addToCart/'.$product->id) }}" id="addToCart" class="btn btn-primary">
+                        <i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+					</div>
+                    | 
+                    <div class="col-sm-2">
+                        <a href="{{ url('buyNow/'.$product->id) }}" class="btn btn-success">
+                        <i class="fa fa-shopping-cart inner-right-vs"></i> BUY </a>
+                    </div>
+
+
+					
+				</div><!-- /.row -->
+			</div><!-- /.quantity-container --> 
+			
+		</div><!-- /.product-info -->
+	       </div><!-- /.col-sm-7 -->
+		</div><!-- /.row -->
+    </div>  
+
+   <div class="product-tabs inner-bottom-xs  wow fadeInUp">
         <div class="row">
             <div class="col-sm-3">
                   <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">

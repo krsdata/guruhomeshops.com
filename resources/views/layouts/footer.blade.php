@@ -40,9 +40,7 @@
     </div>
     <!-- /.logo-slider --> 
     <!-- ============================================== BRANDS CAROUSEL : END ============================================== --> 
-  </div>
-  <!-- /.container --> 
-</div>
+  
 <!-- /#top-banner-and-menu --> 
 
 <!-- ============================================================= FOOTER ============================================================= -->
@@ -101,10 +99,10 @@
           
           <div class="module-body">
             <ul class='list-unstyled'>
-              <li class="fiRSt"><a href="myaccount" title="Contact us">My Account</a></li>
-              <li><a href="##" title="About us">Order History</a></li>
+              <li class="fiRSt"><a href="{{ url('myaccount') }}" title="Contact us">My Account</a></li>
+              <li><a href="{{ url('myaccount') }}" title="About us">Order History</a></li>
               <li><a href="{{url('faq')}}" title="faq">FAQ</a></li> 
-              <li class="last"><a href="##" title="Where is my order?">Help Center</a></li>
+              <li class="last"><a href="{{ url('contact') }}" title="Where is my order?">Help Center</a></li>
             </ul>
           </div>
           <!-- /.module-body --> 
@@ -120,9 +118,9 @@
           <div class="module-body">
             <ul class='list-unstyled'>
               <li class="fiRSt"><a title="Your Account" href="##">About us</a></li>
-              <li><a title="Information" href="##">Customer Service</a></li>
-              <li><a title="Addresses" href="##">Company</a></li>
-              <li><a title="Addresses" href="##">Investor Relations</a></li> 
+              <li><a title="Information" href="{{ url('contact') }}">Customer Service</a></li>
+              <li><a title="Addresses" href="{{ url('contact') }}">Company</a></li>
+              <li><a title="Addresses" href="{{ url('contact') }}">Investor Relations</a></li> 
             </ul>
           </div>
           <!-- /.module-body --> 
@@ -139,8 +137,8 @@
             <ul class='list-unstyled'>
               <li><a href="##" title="Blog">Blog</a></li>
               <li><a href="##" title="Company">Company</a></li>
-              <li><a href="##" title="Investor Relations">Investor Relations</a></li>
-              <li class=" last"><a href="contact-us.html" title="SupplieRS">Contact Us</a></li>
+              <li><a href="{{ url('contact') }}" title="Investor Relations">Investor Relations</a></li>
+              <li class=" last"><a href="{{ url('contact') }}" title="SupplieRS">Contact Us</a></li>
             </ul>
           </div>
           <!-- /.module-body --> 
@@ -191,7 +189,13 @@
     <!-- JavaScripts placed at the end of the document so the pages load faster --> 
     <script src="{{ asset('public/enduser/assets/js/jquery-1.11.1.min.js') }}"></script> 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-    
+    <script type="text/javascript">
+      
+      $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+      });
+    </script>
 
     <script src="{{ asset('public/enduser/assets/js/bootstrap.min.js') }}"></script> 
     <script src="{{ asset('public/enduser/assets/js/bootstrap-hover-dropdown.min.js') }}"></script> 
@@ -206,6 +210,9 @@
     <script src="{{ asset('public/enduser/assets/js/scripts.js') }}"></script>
     <script src="{{ asset('public/assets/js/bootbox.js') }}"></script>
     <script src="{{ asset('public/assets/js/common.js') }}"></script> 
- 
+
+
+
+    
   </body>
 </html>

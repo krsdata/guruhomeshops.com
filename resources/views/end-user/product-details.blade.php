@@ -10,7 +10,8 @@
                 @include('partials.menu')
                  @include('partials.breadcrumb')
          
-                @include('partials.product_detail_sidebar')
+                  @include('partials.product-sidebar') 
+              
                 @include('partials.product_details')
             </div>
         @stop
