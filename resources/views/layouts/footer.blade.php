@@ -199,7 +199,7 @@
     <script src="{{ asset('public/enduser/assets/js/jquery.easing-1.3.min.js') }}"></script> 
     <script src="{{ asset('public/enduser/assets/js/bootstrap-slider.min.js') }}"></script> 
     <script src="{{ asset('public/enduser/assets/js/jquery.rateit.min.js') }}"></script> 
-    <script type="text/javascript" src="{{ asset('public/enduser/assets/js/lightbox.min.js') }}"></script> 
+    
     <script src="{{ asset('public/enduser/assets/js/bootstrap-select.min.js') }}"></script> 
     <script src="{{ asset('public/enduser/assets/js/wow.min.js') }}"></script> 
     <script src="{{ asset('public/enduser/assets/js/scripts.js') }}"></script>
