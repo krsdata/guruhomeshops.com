@@ -7,13 +7,14 @@
         @stop
 
         @section('content') 
-
+         <div class="row">
             @include('partials.menu')
             @include('partials.breadcrumb')
          
-            <div class="row">
+            
                @include('partials.product-sidebar') 
                
                 @include('partials.product') 
             </div> 
     @stop
+ 
