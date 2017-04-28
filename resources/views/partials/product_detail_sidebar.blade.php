@@ -1,52 +1,88 @@
-<div class="col-md-3 sidebar">
-	<div class="sidebar-module-container">
-			 
-             <div class="sidebar-widget hot-deals wow fadeInUp outer-bottom-xs">
-      <h3 class="section-title">hot deals</h3>
-      <div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-ss">
-       
-       @foreach($hot_products as $result)
-        <div class="item">
-          <div class="products">
-            <div class="hot-deal-wrapper">
-              <div class="image"> <img style="height: 200px;" src="{{ asset('storage/uploads/products/'. $result->photo) }}" alt=""> </div>
-              <div class="sale-offer-tag"><span>10%<br>
-                off</span></div> 
-            </div>
-            <!-- /.hot-deal-wrapper -->
-            
-             <div class="product-info text-left m-t-20">
-                <h3 class="name"><a href="detail.html">{{ $result->product_title }}</a> ({{ $result->views+100 }} views) </h3>
-                <div class="rating rateit-small"></div>
-                <div class="product-price"> 
-                <span class="price"> INR  {{ $result->price - ($result->price*$result->discount)/100 }} </span> 
-                <span class="price-before-discount">INR {{ $result->price }}</span> 
-                </div>
-                <!-- /.product-price --> 
-                
-              </div>
-            <!-- /.product-info -->
-            
-            <div class="cart clearfix animate-effect">
-              <div class="action">
-                <a href="{{ url('addToCart/'.$result->id) }}" id="addToCart" > 
-                  <div class="add-cart-button btn-group">
-                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                    <button class="btn btn-primary cart-btn" type="button"> 
-                       Add to cart
-                    </button>  
-                </div>
-                </a>
-              </div>
-              <!-- /.action --> 
-            </div>
-            <!-- /.cart --> 
-          </div>
-        </div>
-        @endforeach
-         
-      </div>
-      <!-- /.sidebar-widget --> 
+ <div class="col-md-3 sidebar"> 
+    <!-- ================================== TOP NAVIGATION ================================== -->
+    <div class="side-menu animate-dropdown outer-bottom-xs">
+      <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Categories</div>
+         <nav class="yamm megamenu-horizontal">
+            <ul class="nav">  
+              @foreach($categories as $key => $value)
+                  <li class="dropdown menu-item"> <a href="{{ url('product-category/'.$value['slug'].'/'.$value['id']) }}" class="dropdown-toggle" data-toggle="dropdown"><i class="icon fa fa-shopping-bag" aria-hidden="true"></i>{{$value['name']}}</a>
+                    <ul class="dropdown-menu mega-menu"> 
+                      <li class="yamm-content">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-3">
+                              <ul class="links list-unstyled">
+                                @if(count($value['child'])>0)
+                                @foreach($value['child'] as $subCat)
+                                  <li><a href="{{ url('product-category/'.$value['name'].'/'.$subCat['slug'].'/'.$subCat['id']) }}">{{$subCat['name']}}</a></li> 
+                                @endforeach
+                                @else
+                                 <li>
+                                 <a href="{{ url('product-category/'.$value['name'].'/'.$value['slug'].'/'.$value['id']) }}">{{$value['name']}}</a></li> 
+                                @endif
+                              </ul>
+                            </div>  
+                          </div> 
+                        </li> 
+                      </ul>
+                    <!-- /.dropdown-menu --> 
+                  </li>
+                <!-- /.menu-item -->
+               @endforeach 
+              <!-- /.menu-item -->  
+              </ul>
+            <!-- /.nav --> 
+          </nav>
+      <!-- /.megamenu-horizontal --> 
     </div>
+    <!-- /.side-menu --> 
+    <!-- ================================== TOP NAVIGATION : END ================================== -->
+    <div class="sidebar-module-container">
+      <div class="sidebar-filter"> 
+        <!-- ============================================== SIDEBAR CATEGORY ============================================== -->
+        <div style="visibility: visible; animation-name: fadeInUp;" class="sidebar-widget wow fadeInUp animated">
+          <h3 class="section-title">shop by</h3>
+          <div class="widget-header">
+            <h4 class="widget-title">Category</h4>
+          </div>
+          <div class="sidebar-widget-body">
+            <div class="accordion">
+              
+          <!-- /.accordion-group -->
+                 @foreach($categories as $key => $value)
+                <div class="accordion-group">
+                  <div class="accordion-heading"> <a href="#collapse{{$key }}" data-toggle="collapse" class="accordion-toggle collapsed"> {{$value['name']}} </a> </div>
+                  <!-- /.accordion-heading -->
+                   
+                    <div class="accordion-body collapse" id="collapse{{$key}}" style="height: 0px;">
+                      <div class="accordion-inner">
+                        <ul>
+                         @if(count($value['child'])>0)
+                          @foreach($value['child'] as $subCat)
+                            <li><a href="{{ url('product-category/'.$value['name'].'/'.$subCat['slug'].'/'.$subCat['id']) }}">{{$subCat['name']}}</a></li> 
+                          @endforeach
+                          @else
+                           <li>
+                           <a href="{{ url('product-category/'.$value['name'].'/'.$value['slug'].'/'.$value['id']) }}">{{$value['name']}}</a></li> 
+                          @endif
+                        </ul>
+                      </div>
+                      <!-- /.accordion-inner --> 
+                    </div>
+                  
+                  <!-- /.accordion-body --> 
+                </div>
+                 @endforeach
+          <!-- /.accordion-group -->
+          
+        </div>
+        <!-- /.accordion --> 
       </div>
+      <!-- /.sidebar-widget-body --> 
+    </div>
+    
+     
+  </div>
+  <!-- /.sidebar-filter --> 
+    </div>
+<!-- /.sidebar-module-container --> 
 </div>

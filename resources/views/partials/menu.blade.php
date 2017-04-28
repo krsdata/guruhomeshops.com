@@ -24,7 +24,7 @@
         
         
         <!-- /.cnt-cart -->
-        <div class="offer-text">Customer Care:   {{ isset($contact_number->field_value)?$contact_number->field_value:"+91-9168518310" }}</div>
+        <div class="offer-text">Save up to 10% everyday on all products</div>
         <div class="clearfix"></div>
       </div>
       <!-- /.header-top-inner --> 

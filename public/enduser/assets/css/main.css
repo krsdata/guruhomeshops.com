@@ -1232,7 +1232,7 @@ header{background:#fdd922}
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
   padding:10px 13px;
-  width: 67%;
+  width: auto;
   background:#eee;
 }
 .control-group {
