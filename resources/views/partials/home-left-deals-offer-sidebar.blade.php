@@ -53,122 +53,17 @@
     
     <!-- ======= SPECIAL OFFER =========== -->
     
-    <div class="sidebar-widget outer-bottom-small wow fadeInUp">
-      <h3 class="section-title">Special Offer</h3>
-      <div class="sidebar-widget-body outer-top-xs">
-        <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
-          @foreach($special_deals as $deal)
-           <div class="item">
-              <div class="products special-product">
-                <div class="product">
-                  <div class="product-micro">
-                    <div class="row product-micro-row">
-                      <div class="col col-xs-5">
-                        <div class="product-image">
-                          <div class="image"> <a href="{{ url('addToCart/'.$deal->id) }}"> <img src="{{ asset('storage/uploads/products/'. $deal->photo) }}" alt=""> </a> </div>
-                          <!-- /.image --> 
-                          
-                        </div>
-                        <!-- /.product-image --> 
-                      </div>
-                      <!-- /.col -->
-                      <div class="col col-xs-7">
-                        <div class="product-info">
-                          <h3 class="name"><a href="{{ url('addToCart/'.$deal->id) }}">{{ $deal->product_title}}</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="product-price"> <span class="price"> INR {{$deal->price}}</span> </div>
-                          <!-- /.product-price --> 
-                          
-                        </div>
-                      </div>
-                      <!-- /.col --> 
-                    </div>
-                    <!-- /.product-micro-row --> 
-                  </div>
-                  <!-- /.product-micro --> 
-                  
-                </div> 
-              </div>
-          </div> 
-          @endforeach
-
-        </div>
-      </div>
-      <!-- /.sidebar-widget-body --> 
-    </div>
+     
     <!-- /.sidebar-widget --> 
     <!-- ============================================== SPECIAL OFFER : END ============================================== --> 
    
     <!-- ============================================== PRODUCT TAGS : END ============================================== --> 
     <!-- ============================================== SPECIAL DEALS ============================================== -->
     
-    <div class="sidebar-widget outer-bottom-small wow fadeInUp">
-      <h3 class="section-title">Special Deals</h3>
-      <div class="sidebar-widget-body outer-top-xs">
-        <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
-          @foreach($hot_products as $deal)
-            <div class="item">
-              <div class="products special-product">
-                <div class="product">
-                  <div class="product-micro">
-                    <div class="row product-micro-row">
-                      <div class="col col-xs-5">
-                        <div class="product-image">
-                          <div class="image"> <a href="{{ url('addToCart/'.$deal->id) }}"> <img src="{{ asset('storage/uploads/products/'. $deal->photo) }}"  alt="{{ $deal->product_title}}"> </a> </div> 
-                          <!-- /.image --> 
-                          
-                        </div>
-                        <!-- /.product-image --> 
-                      </div>
-                      <!-- /.col -->
-                      <div class="col col-xs-7">
-                        <div class="product-info">
-                          <h3 class="name"><a href="{{ url('addToCart/'.$deal->id) }}">{{ $deal->product_title}}</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="product-price"> <span class="price"> INR {{ $deal->product_title}}</span> </div>
-                          <!-- /.product-price --> 
-                          
-                        </div>
-                      </div>
-                      <!-- /.col --> 
-                    </div>
-                    <!-- /.product-micro-row --> 
-                  </div>
-                  <!-- /.product-micro --> 
-                  
-                </div>
-                
-              </div>
-            </div>
-          @endforeach
-          
-        </div>
-      </div>
-      <!-- /.sidebar-widget-body --> 
-    </div>
-    <!-- /.sidebar-widget --> 
-    <!-- ============================================== SPECIAL DEALS : END ============================================== --> 
-    <!-- ============================================== NEWSLETTER ============================================== -->
-    <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small">
-      <h3 class="section-title">NewsletteRS</h3>
-      <div class="sidebar-widget-body outer-top-xs">
-        <p>Sign Up for Our Newsletter!</p>
-        <form>
-          <div class="form-group">
-            <label class="sr-only" for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Subscribe to our newsletter">
-          </div>
-          <button class="btn btn-primary">Subscribe</button>
-        </form>
-      </div>
-      <!-- /.sidebar-widget-body --> 
-    </div>
-    <!-- /.sidebar-widget --> 
-    <!-- ======  NEWSLETTER: END =========== --> 
-    
-    <!-- ============================================== Testimonials============================================== -->
      
     
+    
+   
     <!-- ============================================== Testimonials: END ============================================== -->
      
   </div>

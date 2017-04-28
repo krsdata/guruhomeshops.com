@@ -9,7 +9,7 @@
 <meta name="keywords" content="MediaCenter, Template, eCommerce">
 <meta name="robots" content="all">
 <title> 
-    {{ isset($website_title->field_value)?$website_title->field_value:"ShoperSquare: India largest ecommerce company" }} 
+    {{ isset($website_title->field_value)?$website_title->field_value:"GuruHomeShop:  India Largest Kirana store" }} 
 </title>
 
 <!-- Bootstrap Core CSS -->
@@ -41,7 +41,7 @@
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url({{url('public/assets/img/loading.gif')}}) center no-repeat #fff;
+	background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 }
 .loader {
   border: 16px solid #f3f3f3;
@@ -72,5 +72,5 @@
 </style>
 </head>
 <body class="cnt-home">
-<div class="se-pre-con "></div> 
+<div class="se-pre-con loader"></div> 
  

@@ -93,7 +93,7 @@
                     <table>
                         <tr>
                             <td class="title">
-                                <img src="http://www.guruhomeshops.com/invoice.png">
+                                <img src="http://www.shopersquare.com/invoice.png">
                             </td>
                              
                              <td align="right">
@@ -111,11 +111,9 @@
                     <table>
                         <tr>
                             <td>
-                          {!! isset($company_address->field_value)?$company_address->field_value:"Indore MP 452001" !!} <br>
-                           {{ isset($website_email->field_value)?$website_email->field_value:"info@guruhomeshops.com" }}
-                           <br>
-                           {{ isset($contact_number->field_value)?$contact_number->field_value:"+91-7067777832" }} 
-
+                                       
+                            Plot No. 21/5, 1st Floor,<br> office No. 101 & 102,<br> Vijay Nagar, near Life Care Hospital, Indore – 452001 <br>
+                            http://www.shopersquare.com
                             </td>
                              
                              <td align="right">

@@ -24,7 +24,7 @@
         
         
         <!-- /.cnt-cart -->
-        <div class="offer-text">Customer Care:   {{ isset($contact_number->field_value)?$contact_number->field_value:"+91-9168518310" }}</div>
+        <div class="offer-text">Save up to 10% everyday on all products</div>
         <div class="clearfix"></div>
       </div>
       <!-- /.header-top-inner --> 
@@ -119,7 +119,65 @@
   <!-- /.main-header --> 
   
   <!-- ============================================== NAVBAR ============================================== -->
-  
+  <div class="header-nav animate-dropdown">
+    <div class="container">
+      <div class="yamm navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+       <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> 
+       <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="nav-bg-class">
+          <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
+            <div class="nav-outer">
+              <ul class="nav navbar-nav">
+                <li class="active dropdown yamm-fw">
+                 <a href="{{url('/')}}" >Home</a> </li>
+                
+                @foreach($categories as $key => $value)
+                <li class="dropdown yamm mega-menu"> 
+                <a href="{{ url('product-category/'.$value['slug'].'/'.$value['id']) }}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">{{ isset($value['name'])?$value['name']:'' }}</a>
+                  <ul class="dropdown-menu container">
+                   <li>
+                      <div class="yamm-content ">
+                        <div class="row">
+                          
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">{{$value['name']}}</h2>
+                            <ul class="links">
+                            @if(count($value['child'])>0)
+                                @foreach($value['child'] as $subCat)
+                                  <li><a href="{{ url('product-category/'.$value['name'].'/'.$subCat['slug'].'/'.$subCat['id']) }}">{{$subCat['name']}}</a></li> 
+                                @endforeach
+                                @else
+                                 <li>
+                                 <a href="{{ url('product-category/'.$value['name'].'/'.$value['slug'].'/'.$value['id']) }}">{{$value['name']}}</a></li> 
+                                @endif
+                            </ul>
+                          </div> 
+                          
+                        </div>
+                      </div>
+                    </li> 
+                  </ul> 
+                </li>
+                 @endforeach  
+                  
+               </ul>
+              <!-- /.navbar-nav -->
+              <div class="clearfix"></div>
+            </div>
+            <!-- /.nav-outer --> 
+          </div>
+          <!-- /.navbar-collapse --> 
+          
+        </div>
+        <!-- /.nav-bg-class --> 
+      </div>
+      <!-- /.navbar-default --> 
+    </div>
+    <!-- /.container-class --> 
+    
+  </div>
   <!-- /.header-nav --> 
   <!-- ============================================== NAVBAR : END ============================================== --> 
   
