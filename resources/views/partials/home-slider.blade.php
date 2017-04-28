@@ -58,10 +58,10 @@
                 <div class="info-box">
                   <div class="row">
                     <div class="col-xs-12">
-                      <h4 class="info-box-heading green">Quality</h4>
+                      <h4 class="info-box-heading green">money back</h4>
                     </div>
                   </div>
-                  <h6 class="text"> Product quality guarantee</h6>
+                  <h6 class="text">30 Days Money Back Guarantee</h6>
                 </div>
               </div>
               <!-- .col -->
@@ -73,7 +73,7 @@
                       <h4 class="info-box-heading green">free shipping</h4>
                     </div>
                   </div>
-                  <h6 class="text">Shipping on ordeRS over RS 99</h6>
+                  <h6 class="text">Shipping on ordeRS over RS99</h6>
                 </div>
               </div>
               <!-- .col -->

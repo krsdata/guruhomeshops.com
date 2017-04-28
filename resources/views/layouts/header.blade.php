@@ -9,7 +9,7 @@
 <meta name="keywords" content="MediaCenter, Template, eCommerce">
 <meta name="robots" content="all">
 <title> 
-    {{ isset($website_title->field_value)?$website_title->field_value:"GuruHomeShop:  India Largest Kirana store" }} 
+    {{ isset($website_title->field_value)?$website_title->field_value:"Guruhomeshops: India largest kirana store" }} 
 </title>
 
 <!-- Bootstrap Core CSS -->
@@ -26,6 +26,9 @@
 
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="{{ asset('public/enduser/assets/css/font-awesome.css')}}">
+
+ 
 </head>
 <body class="cnt-home"> 
+ 
  

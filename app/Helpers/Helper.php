@@ -110,18 +110,18 @@ class Helper {
              
 
             $mail->SMTPAuth   = true;                  // enable SMTP authentication
-            $mail->Host       = "mail.intouchamerica.com"; // sets the SMTP server
+            $mail->Host       = "mail.guruhomeshops.com"; // sets the SMTP server
             $mail->Port       = 587;   
             $mail->SMTPSecure = 'false';                 // set the SMTP port for the GMAIL server
-            $mail->Username   = "kroy@intouchamerica.com"; // SMTP account username
-            $mail->Password   = "Qazwsx@123!"; 
+            $mail->Username   = "admin@guruhomeshops.com"; // SMTP account username
+            $mail->Password   = "admin@123!"; 
 
-            $mail->setFrom("admin@intouchamerica.com", "intouchamerica.com");
+            $mail->setFrom("admin@shopersquare.com", "guruhomeshops.com");
             $mail->Subject = "Invoice";
             $mail->MsgHTML($html);
             $mail->addAddress($email_content['receipent_email'], "Shopersquare");
-            $mail->addAddress("kroy.iips@gmail.com","Shopersquare"); 
-            $mail->addAddress("kroy@mailinator.com","Shopersquare");
+            $mail->addAddress("kroy.iips@gmail.com","guruhomeshops"); 
+            $mail->addAddress("guruhomeshop1983@gmail.com","guruhomeshop");
             //$mail->addReplyTo(‘examle@examle.net’, ‘Information’);
             //$mail->addBCC(‘examle@examle.net’);
             //$mail->addAttachment(‘/home/kundan/Desktop/abc.doc’, ‘abc.doc’); // Optional name
