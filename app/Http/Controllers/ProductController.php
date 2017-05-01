@@ -233,11 +233,13 @@ class ProductController extends Controller {
         $products       = Product::with('category')->where(function($q){
             $q->groupBy('product_category');
              $q->orderBy('views','desc');
-        })->get(); 
+        })->groupBy('product_category')->get(); 
 
-        $product_new    = Product::with('category')->orderBy('id','desc')->Paginate(5); 
+        $product_new    = Product::with('category')->orderBy('id','desc')->groupBy('product_category')->Paginate(5); 
         $categories     = Category::nested()->get();  
-      
+        
+
+
  
         return view('end-user.home', compact('special_deals','hot_products','banner_path1', 'banner_path2','categories','products','product_new')); 
     }

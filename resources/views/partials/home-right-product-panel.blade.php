@@ -109,7 +109,9 @@
               
 
               @foreach($products as $key2 => $product)  
-              @if($value['id']==$product->category->parent_id)  
+
+
+              @if($value['id']==$product->category->parent_id && $value['parent_id']==0)  
                   <div class="item item-carousel">
                   <div class="products">
                     <div class="product">
@@ -211,7 +213,8 @@
 
            @foreach($categories as $key => $value)  
             @foreach($product_new as $key2 => $product) 
-              @if($value['id']==$product->category->parent_id)  
+              
+              @if($value['id']==$product->category->parent_id && $value['parent_id']==0) 
 
                  <div class="item item-carousel">
                   <div class="products">
