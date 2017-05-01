@@ -48,7 +48,7 @@
        
         <div class="tab-pane in active" id="all">
           <div class="product-slider">
-            <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
+            <div class=" home-owl-carousel  owl-theme" data-item="4">
              
             @foreach($categories as $key => $value) 
               @foreach($products as $key2 => $product)  
