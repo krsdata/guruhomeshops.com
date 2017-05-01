@@ -235,7 +235,7 @@ class ProductController extends Controller {
              $q->orderBy('views','desc');
         })->groupBy('product_category')->get(); 
 
-        $product_new    = Product::with('category')->orderBy('id','desc')->groupBy('product_category')->Paginate(5); 
+        $product_new    = Product::with('category')->orderBy('id','desc')->groupBy('product_category')->Paginate(12); 
         $categories     = Category::nested()->get();  
         
 
