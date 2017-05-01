@@ -33,13 +33,8 @@
         <h3 class="new-product-title pull-left">New Products</h3>
 
         <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
-
-       
-
-          <li class="active"><a data-transition-type="backSlide" href="##all" data-toggle="tab">All</a></li>
-           @foreach($categories as $key => $value) 
-            <li><a data-transition-type="backSlide" href="##{{$value['name']}}" data-toggle="tab">{{$value['name']}}</a></li> 
-          @endforeach
+ 
+           
         
         </ul>
         <!-- /.nav-tabs --> 
@@ -48,11 +43,11 @@
        
         <div class="tab-pane in active" id="all">
           <div class="product-slider">
-            <div class=" home-owl-carousel  owl-theme" data-item="4">
+            <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
              
             @foreach($categories as $key => $value) 
               @foreach($products as $key2 => $product)  
-              @if($value['id']==$product->category->parent_id)  
+              @if($value['id']!=$product->category->parent_id)  
                 <div class="item item-carousel">
                   <div class="products">
                     <div class="product">
